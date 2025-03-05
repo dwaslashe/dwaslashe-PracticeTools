@@ -1,0 +1,31 @@
+package xyz.dwaslashe.tools.commands;
+
+import org.bukkit.Bukkit;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import xyz.dwaslashe.tools.Main;
+import xyz.dwaslashe.tools.commands.managers.Command;
+import xyz.dwaslashe.tools.utils.Api;
+import xyz.dwaslashe.tools.utils.ChatApi;
+
+import java.util.List;
+
+public class ListCommand extends Command {
+    public ListCommand() {
+        super("list", "/list", "", "online");
+    }
+
+    @Override
+    public List<String> tabCompleteExecute(CommandSender sender, String[] args) {
+        return null;
+    }
+
+    @Override
+    public void commandExecute(CommandSender sender, String[] args) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
+            stringBuilder.append(", ").append(ChatApi.getPrefix(onlinePlayer) + onlinePlayer.getDisplayName());
+        }
+        Api.sendMessage(sender, Main.pluginConfig.getMessages().getPrefix() + "&7Graczy &f" + Bukkit.getOnlinePlayers().size() + "&8/&7" + Bukkit.getMaxPlayers() + " &8(&7" + stringBuilder.toString().replaceFirst(", ", "") + "&8)");
+    }
+}

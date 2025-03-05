@@ -1,0 +1,11 @@
+main: xyz.dwaslashe.tools.Main
+name: dwaslashe-PracticeTools
+version: 1.0.0
+author: [dwaslashe]
+website: dwaslashe.xyz
+description: Tools for Servers Practice!
+depend:
+  - Vault
+  - LuckPerms
+softdepend:
+  - PlaceholderAPI

@@ -1,4 +1,4 @@
-# ⚔️ dwaslashe-PracticeTools
+# ⚔️ dwaslashe-PracticeTools (ARCHIWUM)
 
 Dedykowany zestaw narzędzi i mechanik pomocniczych dla sektora **Practice / PvP** w sieci serwerów **pvpplay.pl**. Plugin odpowiada za obsługę komend graczy i administracji, systemy kar, cząsteczki (particles), integracje z antycheatem oraz automatyzację ogłoszeń na trybie Practice.
 
